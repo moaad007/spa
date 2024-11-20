@@ -9,13 +9,13 @@ function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<Login />} />
-        <Route path="/admin/*" element={
+        <Route path="/spa/" element={<Login />} />
+        <Route path="/spa/admin/*" element={
           <ProtectedRoute role="admin">
             <AdminDashboard />
           </ProtectedRoute>
         } />
-        <Route path="/masseur/*" element={
+        <Route path="/spa/masseur/*" element={
           <ProtectedRoute role="masseur">
             <MasseurDashboard />
           </ProtectedRoute>
